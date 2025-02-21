@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 
+require("dotenv").config();
+
 const app = express();
 const PORT = process.env.PORT;
 
@@ -11,7 +13,6 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, (error) => {
-  if (!error)
-    console.log("Servidor corriendo en puerto http://localhost:${PORT}");
+  if (!error) console.log(`Servidor corriendo en http://localhost:${PORT}`);
   else console.log("Error corriendo servidor: ", error);
 });
