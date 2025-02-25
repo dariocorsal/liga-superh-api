@@ -7,6 +7,12 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT;
 
+const superheroeRoutes = require("./src/routes/superheroeRoutes");
+const ligaRoutes = require("./src/routes/ligaRoutes");
+
+app.use("/superheroes", superheroeRoutes);
+app.use("/liga", ligaRoutes);
+
 app.use(cors());
 app.use(express.json());
 
