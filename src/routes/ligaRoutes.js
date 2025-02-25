@@ -5,7 +5,7 @@ const {
   obtenerEstadoLiga,
 } = require("../controllers/ligaController");
 
-router.get("/liga", obtenerLiga);
-router.get("/liga/estado", obtenerEstadoLiga);
+router.get("/", obtenerLiga);
+router.get("/estado", obtenerEstadoLiga);
 
 module.exports = router;

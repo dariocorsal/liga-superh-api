@@ -10,6 +10,6 @@ const {
 router.get("/", obtenerSuperheroes);
 router.get("/:nombre", obtenerSuperheroePorNombre);
 router.get("/poder/:poder", obtenerSuperheroesPorPoder);
-router.get("/poder/:poder", obtenerSuperheroesPorEdad);
+router.get("/edad/:edad", obtenerSuperheroesPorEdad);
 
 module.exports = router;

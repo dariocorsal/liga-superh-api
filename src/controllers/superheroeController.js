@@ -26,6 +26,8 @@ const obtenerSuperheroePorNombre = async (req, res) => {
 const obtenerSuperheroesPorPoder = async (req, res) => {
   try {
     const superheroes = await Superheroe.find({ poderes: req.params.poder });
+    if (superheroes.length === 0)
+      return res.status(404).json({ mensaje: "Poder no encontrado" });
     res.json(superheroes);
   } catch (error) {
     res
@@ -38,6 +40,8 @@ const obtenerSuperheroesPorPoder = async (req, res) => {
 const obtenerSuperheroesPorEdad = async (req, res) => {
   try {
     const superheroes = await Superheroe.find({ edad: req.params.edad });
+    if (!superheroes.length === 0)
+      return res.status(404).json({ mensaje: "Edad no encontradas" });
     res.json(superheroes);
   } catch (error) {
     res
