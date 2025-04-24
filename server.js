@@ -5,7 +5,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = 3000;
 
 const superheroeRoutes = require("./src/routes/superheroeRoutes");
 const ligaRoutes = require("./src/routes/ligaRoutes");
