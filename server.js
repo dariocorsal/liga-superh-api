@@ -18,7 +18,7 @@ app.use(express.json());
 
 mongoose
   .connect(
-    `mongodb+srv://dariocscs:<db_password>@guardianesjusticia.qnbam.mongodb.net/?retryWrites=true&w=majority&appName=GuardianesJusticia`
+    `mongodb+srv://dariocscs:MemcdMDB0109@guardianesjusticia.qnbam.mongodb.net/?retryWrites=true&w=majority&appName=GuardianesJusticia`
   )
   .then(() => console.log("Conectado a MongoDB Atlas"))
   .catch((err) => console.error("Error al conectar a MongoDB:", err));
