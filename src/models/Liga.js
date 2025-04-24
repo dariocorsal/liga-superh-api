@@ -8,4 +8,4 @@ const LigaSchema = new mongoose.Schema({
   estatus: { type: String, required: true },
 });
 
-module.exports = mongoose.model("Liga", LigaSchema, "liga");
+module.exports = mongoose.model("Liga", LigaSchema);
