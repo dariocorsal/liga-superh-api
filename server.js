@@ -17,7 +17,9 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect(`mongodb://127.0.0.1:27017/superheroes`)
+  .connect(
+    `mongodb+srv://dariocscs:<db_password>@guardianesjusticia.qnbam.mongodb.net/?retryWrites=true&w=majority&appName=GuardianesJusticia`
+  )
   .then(() => console.log("Conectado a MongoDB Atlas"))
   .catch((err) => console.error("Error al conectar a MongoDB:", err));
 
